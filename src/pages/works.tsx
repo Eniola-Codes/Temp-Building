@@ -96,9 +96,9 @@ const Home: React.FC = () => {
                         {project?.name}
                       </span>
 
-                      <a href="/" className="text-[#FDB022]">
+                      <NextLink href="/" className="text-[#FDB022]">
                         {project?.link}
-                      </a>
+                      </NextLink>
                     </div>
                     <div className="mt-2 sm:mt-5 lg:text-xl text-white/40 font-light">
                       {project?.text1 && <p className="">{project?.text1}</p>}
@@ -107,13 +107,13 @@ const Home: React.FC = () => {
                     )} */}
                     </div>
                     <div className="flex items-center justify-between mt-4 lg:mt-10">
-                      <a
+                      <NextLink
                         href={project?.link}
                         target="_blank"
                         className="uppercase border bg-black text-sm sm:text-base text-center w-44 py-2.5 rounded-full hover:bg-white hover:text-black transition-all font-medium"
                       >
                         View Project
-                      </a>
+                      </NextLink>
                       <MdArrowOutward className="text-5xl" />
                     </div>
                   </div>

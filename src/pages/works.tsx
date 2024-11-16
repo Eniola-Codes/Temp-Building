@@ -96,7 +96,7 @@ const Home: React.FC = () => {
                         {project?.name}
                       </span>
 
-                      <NextLink href="/" className="text-[#FDB022]">
+                      <NextLink href={project?.link} className="text-[#FDB022]">
                         {project?.link}
                       </NextLink>
                     </div>
@@ -146,9 +146,9 @@ const Home: React.FC = () => {
                         {project?.name}
                       </span>
 
-                      <a href="/" className="text-[#FDB022]">
+                      <NextLink href={project?.link} className="text-[#FDB022]">
                         {project?.link}
-                      </a>
+                      </NextLink>
                     </div>
                     <div className="mt-2 sm:mt-5 lg:text-xl text-white/40 font-light">
                       {project?.text1 && <p className="">{project?.text1}</p>}

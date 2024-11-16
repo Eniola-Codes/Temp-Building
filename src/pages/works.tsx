@@ -33,7 +33,7 @@ const Home: React.FC = () => {
           <div className="flex items-center justify-between sm:justify-normal sm:space-x-8 text-5xl w-full lg:w-3/4">
             <NextLink
               href={"/"}
-              className="hover:bg-white duration-150 hover:text-black transition-all sm:text-2xl text-xl w-16 h-16 sm:h-20 sm:w-20 flex items-center justify-center rounded-full border-grey-border-200 border bg-grey-bg-100"
+              className="hover:bg-white duration-150 hover:text-black transition-all sm:text-2xl text-xl w-16 h-16 sm:h-20 sm:w-20 flex items-center justify-center rounded-full border-Dark-400 border bg-grey-bg-100"
             >
               <BsChevronLeft />
             </NextLink>
@@ -41,20 +41,20 @@ const Home: React.FC = () => {
         </div>
         <div className="space-y-3 lg:space-y-0 lg:flex-row flex-col flex lg:border-t border-Dark-400 mt-5 sm:mt-10">
           <div className="lg:block lg:w-1/6 lg:border-b border-Dark-400 sticky top-[3.75rem] bg-Dark-theme lg:top-0 lg:static border-t lg:border-t-0">
-            <div className="flex scrollbar-none whitespace-nowrap lg:whitespace-normal border-grey-border-300  overflow-x-auto lg:overflow-hidden space-x-3 px-5 lg:ml-0 lg:space-x-0 lg:block py-3 lg:py-10 text-center lg:sticky lg:top-20">
+            <div className="flex scrollbar-none whitespace-nowrap lg:whitespace-normal border-Dark-400  overflow-x-auto lg:overflow-hidden space-x-3 px-5 lg:ml-0 lg:space-x-0 lg:block py-3 lg:py-10 text-center lg:sticky lg:top-20">
               {projects.map((item, index) => (
                 <Link
                   key={item?.name}
                   className={` ${
                     index === 0 && "lg:!mt-0 lg:!mx-auto"
-                  } cursor-pointer hover:border-grey-border-200 border lg:!mx-auto border-transparent py-2 px-4 lg:px-0 rounded-full lg:block lg:mt-5 text-sm lg:text-base lg:w-40 uppercase hover:bg-grey-bg-100 text-grey-text-200 hover:text-grey-text-100 transition-all`}
+                  } cursor-pointer hover:border-Dark-400 border lg:!mx-auto border-transparent py-2 px-4 lg:px-0 rounded-full lg:block lg:mt-5 text-sm lg:text-base lg:w-40 uppercase hover:bg-grey-bg-100 text-grey-text-200 hover:text-grey-text-100 transition-all`}
                   to={item?.name}
                   spy={true}
                   smooth={true}
                   offset={responsive ? -80 : -190}
                   duration={1000}
                   delay={0}
-                  activeClass="bg-grey-bg-100 !border-grey-border-200 !text-grey-text-100 border"
+                  activeClass="bg-grey-bg-100 !border-Dark-400 !text-grey-text-100 border"
                 >
                   {item?.name}
                 </Link>
@@ -80,12 +80,12 @@ const Home: React.FC = () => {
                       className="h-full w-full object-cover"
                     />
                   </NextLink>
-                  <div className="w-full lg:mt-0 lg:w-3/6 lg:p-10 lg:border-r border-grey-border-300 lg:px-10 sm:px-5 px-2.5">
+                  <div className="w-full lg:mt-0 lg:w-3/6 lg:p-10 lg:border-r border-Dark-400 lg:px-10 sm:px-5 px-2.5">
                     <div className="flex space-x-4 items-center">
                       {project.list.map((item) => (
                         <button
                           key={item?.name}
-                          className={`border-grey-border-200 text-grey-text-100 bg-grey-bg-100 border px-5 py-1.5 mt-3 lg:mt-0 rounded-full`}
+                          className={`border-Dark-400 text-grey-text-100 bg-grey-bg-100 border px-5 py-1.5 mt-3 lg:mt-0 rounded-full`}
                         >
                           {item?.name}
                         </button>
@@ -126,16 +126,16 @@ const Home: React.FC = () => {
             <div className="lg:w-5/6 hidden lg:block">
               {projects.map((project) => (
                 <div
-                  className="flex border-b border-grey-border-300"
+                  className="flex border-b border-Dark-400"
                   key={project.name}
                   id={project?.name}
                 >
-                  <div className="lg:w-3/5 lg:p-10 lg:border-r lg:border-l border-grey-border-300 lg:px-10 sm:px-5 px-3">
+                  <div className="lg:w-3/5 lg:p-10 lg:border-r lg:border-l border-Dark-400 lg:px-10 sm:px-5 px-3">
                     <div className="flex space-x-4 items-center">
                       {project.list.map((item) => (
                         <button
                           key={item?.name}
-                          className={`border-grey-border-200 text-grey-text-100 bg-grey-bg-100 border px-5 py-1.5 mt-3 lg:mt-0 rounded-full`}
+                          className={`border-Dark-400 text-grey-text-100 bg-grey-bg-100 border px-5 py-1.5 mt-3 lg:mt-0 rounded-full`}
                         >
                           {item?.name}
                         </button>

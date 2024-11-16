@@ -1,0 +1,111 @@
+/* Importing Inter font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Apply base styles from Tailwind CSS */
+@tailwind base;
+
+/* Apply component styles from Tailwind CSS */
+@tailwind components;
+
+/* Apply utility styles from Tailwind CSS */
+@tailwind utilities;
+
+/* Styling for the fade effect of the slider */
+.slider-fade {
+  background: linear-gradient(
+    90deg,
+    #fafafa,
+    transparent,
+    #fafafa
+  ); /* Create a linear gradient for the fade effect */
+  -webkit-text-fill-color: transparent; /* Make the text color transparent */
+  width: 100%; /* Set the width to 100% */
+  height: 100%; /* Set the height to 100% */
+  position: absolute; /* Position the element absolutely */
+  top: 0; /* Position it at the top */
+  z-index: 10; /* Set a higher z-index to appear above other elements */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(20%);
+  }
+  50% {
+    transform: translateX(-160%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  background-color: var(--white);
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos::before,
+.logos::after {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos-slide:hover {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 60s slide infinite linear;
+}
+
+/* Media query for devices with a dark color scheme */
+@media (prefers-color-scheme: dark) {
+  .slider-fade {
+    background: linear-gradient(
+      90deg,
+      #151515,
+      transparent,
+      #151515
+    ); /* Adjust the background for the fade effect in dark mode */
+  }
+}
+
+/* Styling for the search input's cancel button in webkit */
+.search-input::-webkit-search-cancel-button {
+  appearance: none; /* Remove the default appearance */
+  display: none; /* Hide the cancel button */
+}
+
+.search-input::-ms-clear {
+  display: none; /* Hide the cancel button */
+}
+
+@media only screen and (max-width: 640px) {
+  @keyframes slide {
+    0% {
+      transform: translateX(20%);
+    }
+    50% {
+      transform: translateX(-340%);
+    }
+    100% {
+      transform: translateX(20%);
+    }
+  }
+}
